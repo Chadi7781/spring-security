@@ -1,0 +1,200 @@
+2021-02-19 18:50:36.775  INFO 16964 --- [restartedMain] uthentifiactionSpringSecurityApplication : Starting AuthentifiactionSpringSecurityApplication using Java 1.8.0_60 on DESKTOP-N8H5UG6 with PID 16964 (C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security\target\classes started by Lenovo in C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security)
+2021-02-19 18:50:36.779  INFO 16964 --- [restartedMain] uthentifiactionSpringSecurityApplication : No active profile set, falling back to default profiles: default
+2021-02-19 18:50:38.532  INFO 16964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-19 18:50:38.533  INFO 16964 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-19 18:50:38.647  INFO 16964 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-02-19 18:50:38.907  INFO 16964 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-19 18:50:38.978  INFO 16964 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-19 18:50:39.247  INFO 16964 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-19 18:50:39.668  INFO 16964 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-19 18:50:39.972  INFO 16964 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-19 18:50:40.128  WARN 16964 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 18:50:40.856  WARN 16964 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in tn.spring.security.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class tn.spring.security.model.User
+2021-02-19 18:50:40.874  INFO 16964 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-02-19 18:50:40.930 ERROR 16964 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in tn.spring.security.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class tn.spring.security.model.User
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:925) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) [spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) [spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) [spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311) [spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) [spring-boot-2.4.2.jar:2.4.2]
+	at tn.spring.security.AuthentifiactionSpringSecurityApplication.main(AuthentifiactionSpringSecurityApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_60]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.4.2.jar:2.4.2]
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class tn.spring.security.model.User
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:582) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.metamodel.internal.MetamodelImpl.managedType(MetamodelImpl.java:85) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:75) ~[spring-data-jpa-2.4.3.jar:2.4.3]
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:66) ~[spring-data-jpa-2.4.3.jar:2.4.3]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:229) ~[spring-data-jpa-2.4.3.jar:2.4.3]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:179) ~[spring-data-jpa-2.4.3.jar:2.4.3]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:162) ~[spring-data-jpa-2.4.3.jar:2.4.3]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:72) ~[spring-data-jpa-2.4.3.jar:2.4.3]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:281) ~[spring-data-commons-2.4.3.jar:2.4.3]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$6(RepositoryFactoryBeanSupport.java:326) ~[spring-data-commons-2.4.3.jar:2.4.3]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230) ~[spring-data-commons-2.4.3.jar:2.4.3]
+	at org.springframework.data.util.Lazy.get(Lazy.java:114) ~[spring-data-commons-2.4.3.jar:2.4.3]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329) ~[spring-data-commons-2.4.3.jar:2.4.3]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144) ~[spring-data-jpa-2.4.3.jar:2.4.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.3.jar:5.3.3]
+	... 22 common frames omitted
+
+2021-02-19 19:17:13.665  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Starting AuthentifiactionSpringSecurityApplication using Java 1.8.0_60 on DESKTOP-N8H5UG6 with PID 10936 (C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security\target\classes started by Lenovo in C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security)
+2021-02-19 19:17:13.669  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : No active profile set, falling back to default profiles: default
+2021-02-19 19:17:15.631  INFO 10936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-19 19:17:15.632  INFO 10936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-19 19:17:15.767  INFO 10936 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-02-19 19:17:16.160  INFO 10936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-19 19:17:16.256  INFO 10936 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-19 19:17:16.522  INFO 10936 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-19 19:17:17.022  INFO 10936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-19 19:17:18.121  INFO 10936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-19 19:17:18.250  WARN 10936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 19:17:19.769  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Started AuthentifiactionSpringSecurityApplication in 6.637 seconds (JVM running for 7.742)
+2021-02-19 19:24:39.236  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Starting AuthentifiactionSpringSecurityApplication using Java 1.8.0_60 on DESKTOP-N8H5UG6 with PID 10936 (C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security\target\classes started by Lenovo in C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security)
+2021-02-19 19:24:39.237  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : No active profile set, falling back to default profiles: default
+2021-02-19 19:24:39.731  INFO 10936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-19 19:24:39.731  INFO 10936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-19 19:24:39.753  INFO 10936 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-02-19 19:24:39.803  INFO 10936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-19 19:24:39.814  INFO 10936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-19 19:24:39.875  INFO 10936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-19 19:24:39.904  WARN 10936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 19:24:40.137  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Started AuthentifiactionSpringSecurityApplication in 0.942 seconds (JVM running for 448.11)
+2021-02-19 19:25:13.736  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Starting AuthentifiactionSpringSecurityApplication using Java 1.8.0_60 on DESKTOP-N8H5UG6 with PID 10936 (C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security\target\classes started by Lenovo in C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security)
+2021-02-19 19:25:13.736  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : No active profile set, falling back to default profiles: default
+2021-02-19 19:25:14.101  INFO 10936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-19 19:25:14.102  INFO 10936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-19 19:25:14.116  INFO 10936 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-02-19 19:25:14.154  INFO 10936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-19 19:25:14.163  INFO 10936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-19 19:25:14.215  INFO 10936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-19 19:25:14.243  WARN 10936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 19:25:14.458  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Started AuthentifiactionSpringSecurityApplication in 0.758 seconds (JVM running for 482.431)
+2021-02-19 19:26:41.214  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Starting AuthentifiactionSpringSecurityApplication using Java 1.8.0_60 on DESKTOP-N8H5UG6 with PID 10936 (C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security\target\classes started by Lenovo in C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security)
+2021-02-19 19:26:41.214  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : No active profile set, falling back to default profiles: default
+2021-02-19 19:26:41.524  INFO 10936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-19 19:26:41.525  INFO 10936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-19 19:26:41.539  INFO 10936 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-02-19 19:26:41.565  INFO 10936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-19 19:26:41.574  INFO 10936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-19 19:26:41.616  INFO 10936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-19 19:26:41.640  WARN 10936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 19:26:41.806  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Started AuthentifiactionSpringSecurityApplication in 0.651 seconds (JVM running for 569.779)
+2021-02-19 19:28:03.374  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Starting AuthentifiactionSpringSecurityApplication using Java 1.8.0_60 on DESKTOP-N8H5UG6 with PID 10936 (C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security\target\classes started by Lenovo in C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security)
+2021-02-19 19:28:03.374  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : No active profile set, falling back to default profiles: default
+2021-02-19 19:28:03.698  INFO 10936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-19 19:28:03.698  INFO 10936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-19 19:28:03.710  INFO 10936 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-02-19 19:28:03.740  INFO 10936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-19 19:28:03.747  INFO 10936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-19 19:28:03.804  INFO 10936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-19 19:28:03.823  WARN 10936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 19:28:03.968  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Started AuthentifiactionSpringSecurityApplication in 0.627 seconds (JVM running for 651.941)
+2021-02-19 19:28:09.844  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Starting AuthentifiactionSpringSecurityApplication using Java 1.8.0_60 on DESKTOP-N8H5UG6 with PID 10936 (C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security\target\classes started by Lenovo in C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security)
+2021-02-19 19:28:09.845  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : No active profile set, falling back to default profiles: default
+2021-02-19 19:28:10.088  INFO 10936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-19 19:28:10.089  INFO 10936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-19 19:28:10.128  INFO 10936 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-02-19 19:28:10.156  INFO 10936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-19 19:28:10.165  INFO 10936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-19 19:28:10.209  INFO 10936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-19 19:28:10.233  WARN 10936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 19:28:10.371  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Started AuthentifiactionSpringSecurityApplication in 0.557 seconds (JVM running for 658.344)
+2021-02-19 19:28:22.352  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Starting AuthentifiactionSpringSecurityApplication using Java 1.8.0_60 on DESKTOP-N8H5UG6 with PID 10936 (C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security\target\classes started by Lenovo in C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security)
+2021-02-19 19:28:22.352  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : No active profile set, falling back to default profiles: default
+2021-02-19 19:28:22.593  INFO 10936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-19 19:28:22.593  INFO 10936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-19 19:28:22.605  INFO 10936 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-02-19 19:28:22.632  INFO 10936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-19 19:28:22.640  INFO 10936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-19 19:28:22.697  INFO 10936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-19 19:28:22.717  WARN 10936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 19:28:22.869  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Started AuthentifiactionSpringSecurityApplication in 0.541 seconds (JVM running for 670.841)
+2021-02-19 19:28:37.839  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Starting AuthentifiactionSpringSecurityApplication using Java 1.8.0_60 on DESKTOP-N8H5UG6 with PID 10936 (C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security\target\classes started by Lenovo in C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security)
+2021-02-19 19:28:37.839  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : No active profile set, falling back to default profiles: default
+2021-02-19 19:28:38.129  INFO 10936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-19 19:28:38.129  INFO 10936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-19 19:28:38.141  INFO 10936 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-02-19 19:28:38.166  INFO 10936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-19 19:28:38.174  INFO 10936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-19 19:28:38.229  INFO 10936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-19 19:28:38.247  WARN 10936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 19:28:38.379  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Started AuthentifiactionSpringSecurityApplication in 0.566 seconds (JVM running for 686.351)
+2021-02-19 19:28:51.376  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Starting AuthentifiactionSpringSecurityApplication using Java 1.8.0_60 on DESKTOP-N8H5UG6 with PID 10936 (C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security\target\classes started by Lenovo in C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security)
+2021-02-19 19:28:51.393  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : No active profile set, falling back to default profiles: default
+2021-02-19 19:28:51.650  INFO 10936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-19 19:28:51.651  INFO 10936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-19 19:28:51.665  INFO 10936 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-02-19 19:28:51.694  INFO 10936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-19 19:28:51.701  INFO 10936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-19 19:28:51.737  INFO 10936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-19 19:28:51.753  WARN 10936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 19:28:51.895  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Started AuthentifiactionSpringSecurityApplication in 0.542 seconds (JVM running for 699.869)
+2021-02-19 19:30:09.190  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Starting AuthentifiactionSpringSecurityApplication using Java 1.8.0_60 on DESKTOP-N8H5UG6 with PID 10936 (C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security\target\classes started by Lenovo in C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security)
+2021-02-19 19:30:09.190  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : No active profile set, falling back to default profiles: default
+2021-02-19 19:30:09.444  INFO 10936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-19 19:30:09.444  INFO 10936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-19 19:30:09.457  INFO 10936 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-02-19 19:30:09.482  INFO 10936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-19 19:30:09.489  INFO 10936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-19 19:30:09.537  INFO 10936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-19 19:30:09.555  WARN 10936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 19:30:09.693  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Started AuthentifiactionSpringSecurityApplication in 0.534 seconds (JVM running for 777.665)
+2021-02-19 19:30:17.585  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Starting AuthentifiactionSpringSecurityApplication using Java 1.8.0_60 on DESKTOP-N8H5UG6 with PID 10936 (C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security\target\classes started by Lenovo in C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security)
+2021-02-19 19:30:17.585  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : No active profile set, falling back to default profiles: default
+2021-02-19 19:30:17.785  INFO 10936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-19 19:30:17.785  INFO 10936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-19 19:30:17.797  INFO 10936 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-02-19 19:30:17.817  INFO 10936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-19 19:30:17.824  INFO 10936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-19 19:30:17.875  INFO 10936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-19 19:30:17.893  WARN 10936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 19:30:18.030  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Started AuthentifiactionSpringSecurityApplication in 0.468 seconds (JVM running for 786.003)
+2021-02-19 19:31:51.803  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Starting AuthentifiactionSpringSecurityApplication using Java 1.8.0_60 on DESKTOP-N8H5UG6 with PID 10936 (C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security\target\classes started by Lenovo in C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security)
+2021-02-19 19:31:51.803  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : No active profile set, falling back to default profiles: default
+2021-02-19 19:31:52.112  INFO 10936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-19 19:31:52.112  INFO 10936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-19 19:31:52.124  INFO 10936 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-02-19 19:31:52.146  INFO 10936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-19 19:31:52.153  INFO 10936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-19 19:31:52.202  INFO 10936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-19 19:31:52.216  WARN 10936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 19:31:52.340  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Started AuthentifiactionSpringSecurityApplication in 0.565 seconds (JVM running for 880.313)
+2021-02-19 20:43:49.327  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Starting AuthentifiactionSpringSecurityApplication using Java 1.8.0_60 on DESKTOP-N8H5UG6 with PID 10936 (C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security\target\classes started by Lenovo in C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security)
+2021-02-19 20:43:49.327  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : No active profile set, falling back to default profiles: default
+2021-02-19 20:43:49.580  INFO 10936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-19 20:43:49.580  INFO 10936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-19 20:43:49.588  INFO 10936 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-02-19 20:43:49.608  INFO 10936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-19 20:43:49.613  INFO 10936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-19 20:43:49.645  INFO 10936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-19 20:43:49.663  WARN 10936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 20:43:49.792  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Started AuthentifiactionSpringSecurityApplication in 0.488 seconds (JVM running for 5197.765)
+2021-02-19 20:44:10.773  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Starting AuthentifiactionSpringSecurityApplication using Java 1.8.0_60 on DESKTOP-N8H5UG6 with PID 10936 (C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security\target\classes started by Lenovo in C:\Users\Lenovo\Documents\workspace-sts-3.8.4.RELEASE\authentifiaction-spring-security)
+2021-02-19 20:44:10.774  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : No active profile set, falling back to default profiles: default
+2021-02-19 20:44:10.920  INFO 10936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-19 20:44:10.920  INFO 10936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-19 20:44:10.927  INFO 10936 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2021-02-19 20:44:10.947  INFO 10936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-19 20:44:10.952  INFO 10936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-19 20:44:10.974  INFO 10936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-19 20:44:10.985  WARN 10936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 20:44:11.078  INFO 10936 --- [restartedMain] uthentifiactionSpringSecurityApplication : Started AuthentifiactionSpringSecurityApplication in 0.319 seconds (JVM running for 5219.051)
